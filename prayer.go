@@ -12,7 +12,7 @@ import (
 
 func main() {
 	uri, currDay := cunstructUri()
-	nextPrayer := flag.String("nextPrayer", "", "next prayer")
+	prayer := flag.String("prayer", "", "wanted prayer")
 	flag.Parse()
 	data, err := fetchAdhanData(&uri)
 	if err != nil {
@@ -21,8 +21,8 @@ func main() {
 	}
 
 
-	if *nextPrayer != "" {
-		switch *nextPrayer {
+	if *prayer != "" {
+		switch *prayer {
 		case "Fajr":
 			println("Fajr: " + data.Data[currDay - 1].Timings.Fajr)
 		case "Dhuhr":

@@ -1,3 +1,3 @@
-module github.com/Elias-Belkheiri/Prayer-CLI
+module github.com/Elias-Belkheiri/Prayer
 
 go 1.22.3
